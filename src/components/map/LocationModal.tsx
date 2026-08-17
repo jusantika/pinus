@@ -93,7 +93,7 @@ export default function LocationModal({ lat, lng, onClose, onSuccess }: Location
       onClick={handleBackgroundClick}
     >
       <div 
-        className="bg-white w-full sm:max-w-md rounded-3xl max-h-[80vh] flex flex-col shadow-2xl animate-in slide-in-from-bottom-10 sm:slide-in-from-bottom-4 duration-300"
+        className="bg-white w-full sm:max-w-md rounded-3xl max-h-[85dvh] flex flex-col shadow-2xl animate-in slide-in-from-bottom-10 sm:slide-in-from-bottom-4 duration-300"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="bg-white/90 backdrop-blur-xl border-b border-gray-100 p-6 z-10 flex justify-between items-start rounded-t-3xl flex-shrink-0">
@@ -181,7 +181,7 @@ export default function LocationModal({ lat, lng, onClose, onSuccess }: Location
             </div>
 
             {formData.status === 'visited' && (
-              <div className="grid grid-cols-2 gap-4 animate-in fade-in slide-in-from-top-2 duration-300">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-in fade-in slide-in-from-top-2 duration-300">
                 <div>
                   <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Tanggal</label>
                   <input 

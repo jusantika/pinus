@@ -123,7 +123,7 @@ export default function LocationModal({ lat, lng, onClose, onSuccess }: Location
             <p className="text-gray-500 text-center font-medium">Lokasi berhasil ditambahkan ke daftar memori kalian.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-6 overflow-y-auto pb-8">
+          <form onSubmit={handleSubmit} className="p-6 flex flex-col gap-6 overflow-y-auto overflow-x-hidden pb-8">
             <div className="space-y-4">
             <div>
               <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Nama Tempat</label>
@@ -186,7 +186,7 @@ export default function LocationModal({ lat, lng, onClose, onSuccess }: Location
                   <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Tanggal</label>
                   <input 
                     type="date" 
-                    className="w-full bg-gray-50 border-transparent focus:bg-white focus:border-blue-500 rounded-2xl p-4 text-gray-900 font-medium outline-none ring-0 focus:ring-4 ring-blue-500/10 transition-all"
+                    className="w-full min-w-0 block appearance-none bg-gray-50 border-transparent focus:bg-white focus:border-blue-500 rounded-2xl p-4 text-gray-900 font-medium outline-none ring-0 focus:ring-4 ring-blue-500/10 transition-all"
                     value={formData.visited_date}
                     onChange={(e) => setFormData({...formData, visited_date: e.target.value})}
                   />
